@@ -199,13 +199,15 @@ terraform-docker-task3/
 ├── execution-logs.txt
 │
 └── screenshots/
-    ├── 01-terraform-validate.png
-    ├── 02-terraform-init.png
-    ├── 03-terraform-plan.png
-    ├── 04-terraform-apply.png
-    ├── 05-docker-container.png
-    ├── 06-terraform-state.png
-    └── 07-terraform-destroy.png
+├── 00-aws-ec2-instance.png
+├── 01-terraform-init.png
+├── 02-terraform-plan.png
+├── 03-terraform-apply.png
+├── 04-docker-container.png
+├── 05-nginx-verification.png
+├── 06-terraform-state.png
+├── 07-terraform-destroy.png
+└── 08-github-repository.png
 ```
 
 ## Conclusion
