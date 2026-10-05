@@ -1,0 +1,87 @@
+DEVOPS INTERNSHIP TASK 3
+Infrastructure as Code (IaC) with Terraform
+============================================
+
+Environment:
+- OS: Ubuntu 24.04 LTS
+- Platform: AWS EC2
+- Terraform: 1.16.5
+- Docker: 29.1.3
+- Docker Provider: kreuzwerker/docker v3.9.0
+
+1. Terraform Initialization
+Command:
+terraform init
+
+Result:
+Terraform initialized successfully.
+
+2. Terraform Validation
+Command:
+terraform validate
+
+Result:
+Success! The configuration is valid.
+
+3. Terraform Plan
+Command:
+terraform plan
+
+Result:
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Resources:
+- docker_image.nginx
+- docker_container.nginx
+
+4. Terraform Apply
+Command:
+terraform apply
+
+Result:
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+5. Docker Verification
+Command:
+docker ps
+
+Result:
+Container terraform-nginx was running with port mapping:
+0.0.0.0:8080 -> 80/tcp
+
+6. Application Verification
+Command:
+curl http://localhost:8080
+
+Result:
+Nginx welcome page was successfully returned.
+
+7. Terraform State
+Command:
+terraform state list
+
+Resources:
+docker_container.nginx
+docker_image.nginx
+
+8. Terraform State Inspection
+Command:
+terraform state show docker_container.nginx
+
+Result:
+Terraform successfully displayed the managed Docker container state.
+
+9. Terraform Destroy
+Command:
+terraform destroy
+
+Result:
+Infrastructure was successfully destroyed.
+
+Final verification:
+docker ps
+docker ps -a
+terraform state list
+
+Result:
+The Terraform-managed Docker resources were removed successfully.
